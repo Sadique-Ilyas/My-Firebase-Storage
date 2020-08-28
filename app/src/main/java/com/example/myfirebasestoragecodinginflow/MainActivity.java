@@ -131,7 +131,7 @@ public class MainActivity extends AppCompatActivity {
                             while (!uri.isComplete());
                             Uri url = uri.getResult();
 
-                            Upload upload = new Upload(mEditTextFileName.getText().toString().trim(), url.toString());
+                            Upload upload = new Upload(mEditTextFileName.getText().toString().trim(),url.toString());
                             String uploadId = databaseReference.push().getKey();
                             databaseReference.child(uploadId).setValue(upload);
                         }
